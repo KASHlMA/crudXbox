@@ -5,7 +5,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="600" prefWidth="1100" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.XboxController">
+<BorderPane prefHeight="600" prefWidth="1100" xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.crudxbox.XboxController">
 
     <center>
         <TableView fx:id="tblTareas" prefHeight="600.0" prefWidth="537.0" BorderPane.alignment="CENTER">
