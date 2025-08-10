@@ -1,0 +1,180 @@
+/* ===== Xbox Theme (JavaFX) ===== */
+
+/* Colores base */
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", "Arial";
+    -fx-base: #121212;                /* fondo base oscuro */
+    -fx-background: #0f0f0f;          /* fondo raíz */
+    -fx-control-inner-background: #1a1a1a;
+    -fx-text-background-color: #e8e8e8;
+    -fx-accent: #107c10;              /* Xbox green */
+    -fx-focus-color: #31a431;         /* foco verde */
+    -fx-faint-focus-color: rgba(16,124,16,0.25);
+}
+
+/* Títulos y etiquetas */
+.label {
+    -fx-text-fill: #e8e8e8;
+}
+.label:disabled {
+    -fx-opacity: 0.5;
+}
+
+/* Botones (estilo pill) */
+.button {
+    -fx-background-color: linear-gradient(#1e1e1e, #171717);
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 999;
+    -fx-padding: 8 18 8 18;
+    -fx-border-color: transparent;
+    -fx-border-radius: 999;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 10, 0.3, 0, 2);
+}
+.button:hover {
+    -fx-background-color: linear-gradient(#2a2a2a, #1e1e1e);
+}
+.button:pressed {
+    -fx-background-color: #107c10;
+}
+.button:focused {
+    -fx-border-color: #31a431;
+    -fx-border-width: 1;
+}
+.button:default {
+    -fx-background-color: #107c10;
+}
+.button:default:hover {
+    -fx-background-color: #139313;
+}
+
+/* Inputs */
+.text-field, .text-area, .combo-box-base, .date-picker, .choice-box {
+    -fx-background-color: #1a1a1a, #1a1a1a, #0d0d0d;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 10, 9, 8;
+    -fx-text-fill: #e8e8e8;
+    -fx-prompt-text-fill: #8f8f8f;
+    -fx-padding: 8 10 8 10;
+    -fx-border-color: transparent;
+}
+.text-area .content {
+    -fx-background-color: #1a1a1a;
+    -fx-text-fill: #e8e8e8;
+    -fx-padding: 8;
+    -fx-background-radius: 8;
+}
+.text-field:focused, .text-area:focused, .combo-box-base:focused, .date-picker:focused {
+    -fx-effect: dropshadow(gaussian, rgba(49,164,49,0.35), 12, 0.3, 0, 0);
+    -fx-background-color: #1f1f1f, #1f1f1f, #0d0d0d;
+}
+
+.combo-box .list-cell, .choice-box .label {
+    -fx-text-fill: #e8e8e8;
+    -fx-background-color: transparent;
+}
+.combo-box .arrow, .date-picker .arrow-button .arrow {
+    -fx-background-color: #e8e8e8;
+}
+
+/* DatePicker popup */
+.date-picker .cell {
+    -fx-background-color: #121212;
+    -fx-text-fill: #e8e8e8;
+}
+.date-picker .cell:hover {
+    -fx-background-color: #1f1f1f;
+}
+.date-picker .selected, .date-picker .cell:selected {
+    -fx-background-color: #107c10;
+    -fx-text-fill: white;
+}
+
+/* TableView */
+.table-view {
+    -fx-background-color: #121212;
+    -fx-background-radius: 10;
+    -fx-padding: 8;
+    -fx-table-cell-border-color: #262626;
+    -fx-table-header-border-color: #262626;
+}
+.table-view:focused {
+    -fx-effect: dropshadow(gaussian, rgba(49,164,49,0.25), 14, 0.3, 0, 0);
+}
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(#1b1b1b, #151515);
+    -fx-background-radius: 10 10 0 0;
+}
+.table-view .column-header, .table-view .filler {
+    -fx-size: 34px;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #cfcfcf;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: #141414;
+    -fx-text-fill: #e8e8e8;
+}
+.table-row-cell:odd {
+    -fx-background-color: #161616;
+}
+.table-row-cell:hover {
+    -fx-background-color: #1e1e1e;
+}
+.table-row-cell:selected {
+    -fx-background-color: #107c10;
+    -fx-text-fill: white;
+}
+.table-cell {
+    -fx-padding: 8 10 8 10;
+}
+
+/* Scrollbars (minimal) */
+.scroll-bar:horizontal, .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+.scroll-bar .thumb {
+    -fx-background-color: #2a2a2a;
+    -fx-background-insets: 0;
+    -fx-background-radius: 999;
+}
+.scroll-bar .thumb:hover {
+    -fx-background-color: #343434;
+}
+
+/* HBox/VBox spacing visual suave */
+.hbox, .vbox {
+    -fx-background-color: transparent;
+}
+
+/* Tooltips */
+.tooltip {
+    -fx-background-color: #1a1a1a;
+    -fx-text-fill: #e8e8e8;
+    -fx-background-radius: 8;
+    -fx-padding: 8 10 8 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.45), 10, 0.3, 0, 2);
+}
+
+/* Separadores / bordes suaves */
+.separator *.line {
+    -fx-border-color: #262626;
+}
+
+/* Pane derecho (si quieres diferenciarlo) */
+.right-pane, .side-pane {
+    -fx-background-color: linear-gradient(#141414, #101010);
+    -fx-background-radius: 12;
+    -fx-padding: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 16, 0.3, 0, 3);
+}
+
+/* Estados de validación simples */
+.input-error {
+    -fx-background-color: #2a1515, #2a1515, #0d0d0d;
+    -fx-border-color: #a40000;
+    -fx-border-radius: 10;
+}

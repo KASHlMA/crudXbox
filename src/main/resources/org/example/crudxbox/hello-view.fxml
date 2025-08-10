@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="600" prefWidth="1100" xmlns="http://javafx.com/javafx/17.0.12"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.crudxbox.XboxController">
+<BorderPane prefHeight="600" prefWidth="1100" stylesheets="@../../../Style/Style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.crudxbox.XboxController">
 
     <center>
         <TableView fx:id="tblTareas" prefHeight="600.0" prefWidth="537.0" BorderPane.alignment="CENTER">
@@ -21,7 +20,7 @@
     </center>
 
     <right>
-        <VBox spacing="10" BorderPane.alignment="CENTER">
+        <VBox prefHeight="544.0" prefWidth="697.0" spacing="10" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="0.0" left="16.0" right="16.0" top="0.0" />
             </padding>
@@ -67,7 +66,6 @@
                 <Button fx:id="btnLimpiar" onAction="#onLimpiar" text="Limpiar" />
             </HBox>
 
-            <Label style="-fx-text-fill: #666;" text="Tip: selecciona una fila para editar o eliminar. Los datos se guardan solo en memoria." />
         </VBox>
     </right>
 </BorderPane>
