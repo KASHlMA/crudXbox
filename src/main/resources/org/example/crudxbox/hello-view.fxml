@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="600" prefWidth="1100" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.XboxController">
+
+    <center>
+        <TableView fx:id="tblTareas" prefHeight="600.0" prefWidth="537.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="60" text="ID" />
+                <TableColumn fx:id="colTitulo" prefWidth="220" text="Título" />
+                <TableColumn fx:id="colPrioridad" prefWidth="110" text="Prioridad" />
+                <TableColumn fx:id="colFecha" prefWidth="130" text="Fecha Límite" />
+                <TableColumn fx:id="colDescripcion" prefWidth="400" text="Descripción" />
+            </columns>
+        </TableView>
+    </center>
+
+    <right>
+        <VBox spacing="10" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="0.0" left="16.0" right="16.0" top="0.0" />
+            </padding>
+
+            <Label text="Gestionar videojuegos Xbox">
+                <font><Font name="System Bold" size="16" /></font>
+            </Label>
+
+            <GridPane hgap="8" vgap="8">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="35" />
+                    <ColumnConstraints percentWidth="65" />
+                </columnConstraints>
+
+                <children>
+                    <Label text="Título:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <TextField fx:id="txtTitulo" promptText="Título" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <Label text="Descripción:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextArea fx:id="txtDescripcion" prefRowCount="6" promptText="Descripción" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label text="Prioridad:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <ComboBox fx:id="cbPrioridad" promptText="Prioridad" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <Label text="Fecha Límite:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <DatePicker fx:id="dpFechaLimite" promptText="Fecha límite" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                </children>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+
+            <HBox spacing="10">
+                <Button fx:id="btnAgregar" defaultButton="true" onAction="#onAgregar" text="Agregar" />
+                <Button fx:id="btnEditar" disable="true" onAction="#onEditar" text="Editar" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Button fx:id="btnEliminar" disable="true" onAction="#onEliminar" text="Eliminar" />
+                <Button fx:id="btnLimpiar" onAction="#onLimpiar" text="Limpiar" />
+            </HBox>
+
+            <Label style="-fx-text-fill: #666;" text="Tip: selecciona una fila para editar o eliminar. Los datos se guardan solo en memoria." />
+        </VBox>
+    </right>
+</BorderPane>
